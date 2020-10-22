@@ -11,9 +11,9 @@ public class Student {
 
     private int studentNo;
     private int[] subjectIds;
-    private double[] subjectGrades;
+    private int[] subjectGrades;
 
-    public Student(int studentNo, int[] subjectIds, double[] subjectGrades)
+    public Student(int studentNo, int[] subjectIds, int[] subjectGrades)
     {
         this.studentNo = studentNo;
         this.subjectIds = subjectIds;
@@ -32,10 +32,10 @@ public class Student {
         return this.studentNo;
     }
 
-    public int calculateAverageResult()
-    {
-
-    }
+//    public int calculateAverageResult()
+//    {
+//
+//    }
 
 
 }
