@@ -19,8 +19,11 @@ public class MainApp
         scanFile(results); //Method to begin reading from the file
     }
 
+    /**
+     * @param results Contains the URL of the text file of exam results
+     */
     public static void scanFile(File results) {
-        /*scanFile() method reads one student at a time, passes the results into the selectFiveGrades() method*/
+        /* scanFile() method reads one student at a time, passes the results into the selectFiveGrades() method */
         int[] subjectCodes = new int[8]; //Create array to store subject codes from text file
         int[] subjectGrades = new int[8]; //Create array to store subject grades from text file
         int[] selectedGrades; //Create array to store 5 grades selected in selectFiveGrades() method
@@ -50,6 +53,10 @@ public class MainApp
             }
     }
 
+    /**
+     * @param subjectCodes Array of integers referencing the codes of different subjects in the JC codes Excel file
+     * @param subjectGrades Array of integer grades corresponding with each subject code in the subjectCodes array
+     */
     public static int[] selectFiveGrades(int[] subjectCodes, int[] subjectGrades)
             /*selectFiveGrades takes the subject codes and grades for a particular student and selects the Irish, English
              and Maths grades, along with the best two other results besides CSPE*/
@@ -90,6 +97,9 @@ public class MainApp
         return selectedGrades;
     }
 
+    /**
+     * @param selectedGrades Array of five integer grades, Irish, English, Maths, and the best two remaining grades other than CSPE
+     */
     public static double calculateAverage(int[] selectedGrades) {
         /*Takes the selected grades and finds the average*/
         int total = 0;
@@ -105,6 +115,10 @@ public class MainApp
         return average;
     }
 
+    /**
+     * @param studentNo 6-digit Integer ID for each student
+     * @param averageGrade double type Average of the five selected grades
+     */
     public static void printResults(int studentNo, double averageGrade)
     {
         System.out.printf("%d%20.2f\n",studentNo,averageGrade); //Prints the student number and average to two decimal places
