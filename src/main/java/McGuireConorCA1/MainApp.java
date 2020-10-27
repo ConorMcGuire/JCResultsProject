@@ -14,7 +14,7 @@ public class MainApp
 
         File results = new File("JC_Results.txt");
 
-        System.out.println("Student Number\tAverage Grade");
+        System.out.println("Student Number\t\tAverage Grade");
         scanFile(results);
     }
 
@@ -96,7 +96,7 @@ public class MainApp
 
     public static void printResults(int studentNo, double averageGrade)
     {
-        System.out.printf("%d\t\t\t%.2f\n",studentNo,averageGrade);
+        System.out.printf("%d%20.2f\n",studentNo,averageGrade);
     }
 
 
